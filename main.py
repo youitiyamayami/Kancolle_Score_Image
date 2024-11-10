@@ -39,16 +39,6 @@ def select_image():
     )
     return file_path
 
-# ローカル画像の処理
-def process_local_image(file_path):
-    if file_path:
-        print(f"Selected local image: {file_path}")
-        # ここで必要に応じて画像の処理を行う
-        image = Image.open(file_path)
-        image.show()  # 例として画像を表示
-    else:
-        print("No file selected.")
-
     # 画像から特定範囲を切り取って OCR を行う関数
 def crop_and_ocr(image, top_left, bottom_right):
     cropped_image = image.crop((*top_left, *bottom_right))
