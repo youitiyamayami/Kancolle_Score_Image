@@ -25,6 +25,7 @@ creds = Credentials.from_service_account_file(
     scopes=['https://www.googleapis.com/auth/spreadsheets']
 )
 
+
 # Google Sheetsクライアント
 gs_client = gspread.authorize(creds)
 sheet = gs_client.open_by_key(SHEET_ID).worksheet(SHEET_NAME)
